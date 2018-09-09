@@ -6,7 +6,7 @@ from datetime import datetime
 from time import sleep
 from bs4 import BeautifulSoup
 from humanfriendly import format_timespan, format_size, format_number, format_length
-import time, random, sys, json, codecs, threading, glob, re, string, os, requests, subprocess, six, ast, pytz, urllib.request, urllib.parse, urllib.error, urllib.parse,antolib,subprocess,unicodedata,GACSender
+import time, random, sys, json, codecs, threading, glob, re, string, , requests, subprocess, six, ast, pytz, urllib.request, urllib.parse, urllib.error, urllib.parse,subprocess,unicodedata,GACSender
 from gtts import gTTS
 from googletrans import Translator
 #==============================================================================#
@@ -20,9 +20,9 @@ line.log("Timeline Token : " + str(line.tl.channelAccessToken))
 
 print ("Login Succes")
 
-lineMID = line.profile.mid
-lineProfile = line.getProfile()
-lineSettings = line.getSettings()
+lineMID = line.profile u7a95e1c0ad51d08814e319acbc3fbba7.mid
+lineProfile = line.getProfile(u7a95e1c0ad51d08814e319acbc3fbba7)
+lineSettings = line.getSettings(u7a95e1c0ad51d08814e319acbc3fbba7)
 
 oepoll = OEPoll(line)
 #call = Call(line)
@@ -32,11 +32,12 @@ read = json.load(readOpen)
 settings = json.load(settingsOpen)
 Rfu = [line]
 Exc = [line]
-lineMID = line.getProfile().mid
+lineMID = line.getProfile(u7a95e1c0ad51d08814e319acbc3fbba7).mid
 bot1 = line.getProfile().mid
 RfuBot=[lineMID]
-Family=["u3930826c2f2dbf7b11a27efbcc37add",lineMID]
-admin=['u3930826c2f2dbf7b11a27efbcc37add',lineMID]
+Family=["[MID]
+admin=[u7a95e1c0ad51d08814e319acbc3fbba7[MID]
+lineMID]=[u7a95e1c0ad51d08814e319acbc3fbba7[MID]
 RfuFamily = RfuBot + Family
 
 protectname = []
@@ -49,14 +50,14 @@ targets = []
 #==============================================================================#
 settings = {
     "autoAdd": True,
-    "autoJoin": False,
+    "autoJoin": True ,
     'autoCancel':{"on":True,"members":10},	
     "autoLeave": False,
     "autoRead": False,
     "leaveRoom": False,
     "detectMention": True,
     "checkSticker": False,
-    "kickMention": False,
+    "kickMention": True ,
     "potoMention": True,
     "lang":"JP",
     "Wc": False,
@@ -72,11 +73,11 @@ settings = {
     "cName":"",
     "cNames":"",
     "invite": {},
-    "winvite": False,
+    "winvite": True ,
     "pnharfbot": {},
     "pname": {},
     "pro_name": {},
-    "message":"บัญชีนี้ได้การป้องกันโดย ༺ πနးຫຮี่のีধ์ ༻ ระบบได้ทำการบล็อคคุณอัตโนมัติ",
+    "message":"บัญชีนี้ได้การป้องกันโดย ༺ น้องบิ๊ก ༻ ระบบได้ทำการบล็อคคุณอัตโนมัติ",
     "comment":"ขอบคุณที่แอดมา",
     "userAgent": [
         "Mozilla/5.0 (X11; U; Linux i586; de; rv:5.0) Gecko/20100101 Firefox/5.0",
@@ -228,7 +229,7 @@ def sendMessageWithMention(to, lineMID):
         logError(error)
  
 def myhelp():
-    myHelp = "____ ༺ πနးຫຮี่のีধ์ ༻ _____ " + "\n" \
+    myHelp = "____ ༺ น้องบิ๊ก ༻ _____ " + "\n" \
                   "°•About" + "\n" + \
                   "°•คำสั่งโซเชียล" + "\n" + \
                   "°•คำสั่งคิก" + "\n" + \
@@ -260,7 +261,7 @@ def myhelp():
                   "°•Cbroadcastvoice" + "\n" + \
                   "°•รีบอท" + "\n" + \
                   "°•เชคออน์" + "\n" + \
-                  "______༺ πနးຫຮี่のีধ์ ༻_____"
+                  "______༺ น้องบิ๊ก ༻_____"
     return myHelp
 
 def listgrup():
@@ -437,7 +438,7 @@ def helptexttospeech():
                          "╠❂ vi : Vietnamese" + "\n" + \
                          "╠❂ cy : Welsh" + "\n" + \
                          "╚══════════════┛" + "\n" + "\n\n" + \
-                          "「ตัวอย่าง say-th หนูสวย」"
+                          "「ตัวอย่าง say-th ตัวอย่างไร」"
     return helpTextToSpeech
     
 def helplanguange():
@@ -659,7 +660,7 @@ def lineBot(op):
 #==============================================================================#
                 elif text.lower() == 'speed':
                     start = time.time()
-                    line.sendMessage(to, "กำลังทดสอบ")
+                    line.sendMessage(to, "ลองแปป")
                     elapsed_time = time.time() - start
                     line.sendMessage(msg.to, "[ %s Seconds ] [ " % (elapsed_time) + str(int(round((time.time() - start) * 1000)))+" ms ]")
                 elif text.lower() == 'sp':
@@ -685,14 +686,14 @@ def lineBot(op):
                         grouplist = line.getGroupIdsJoined()
                         contactlist = line.getAllContactIds()
                         blockedlist = line.getBlockedContactIds()
-                        ret_ = "╔══[ ✯༺ πနးຫຮี่のีধ์ ༻ ]"
+                        ret_ = "╔══[ ✯༺ น้องบิ๊ก ༻ ]"
                         ret_ += "\n╠۝ ชื่อ ═ {}".format(contact.displayName)
                         ret_ += "\n╠۝ กลุ่ม ═ {}".format(str(len(grouplist)))
                         ret_ += "\n╠۝ เพื่อน ═ {}".format(str(len(contactlist)))
                         ret_ += "\n╠۝ บล็อค ═ {}".format(str(len(blockedlist)))
                         ret_ += "\n╠══[สถานะ]"
                         ret_ += "\n╠۝ ผู้สร้าง ═ {}".format(creator.displayName)
-                        ret_ += "\n╚══[ ✯༺ πနးຫຮี่のีধ์ ༻✯ ]"
+                        ret_ += "\n╚══[ ✯༺ น้องบิ๊ก ༻✯ ]"
                         line.sendContact(to, owner)
                         line.sendMessage(to, str(ret_))
                     except Exception as e:
@@ -790,7 +791,8 @@ def lineBot(op):
                     line.sendContact(to, lineMID)
                 elif text.lower() == 'creator':
                     sendMessageWithMention(to, lineMID)
-                    line.sendContact(to, "u3930826c2f2dbf7b11a27efbcc37add5")
+                    line.sendContact(to, "[MID]
+u7a95e1c0ad51d08814e319acbc3fbba7")
                 elif text.lower() == 'มิด':
                     line.sendMessage(msg.to,"[มิด]\n" +  lineMID)
                 elif text.lower() == 'ชื่อ':
@@ -1069,7 +1071,7 @@ def lineBot(op):
                         except:
                             pass	
                 elif msg.text.lower() == ".getjoined":
-                    line.sendText(msg.to,"กรุณารอสักครู่ ใจเย็นๆ")
+                    line.sendText(msg.to,"กรุณารอสักครู่ ใจเย็นๆค้าบ ดูหำรอก่อนมั้ย")
                     all = line.getGroupIdsJoined()
                     text = ""
                     cnt = 0
@@ -2882,7 +2884,7 @@ def lineBot(op):
                                line.kickoutFromGroup(msg.to,[target])             
                                print ("Sb Kick User")
                            except:
-                               line.sendMessage(msg.to,"Limit kaka 😫")                               
+                               line.sendMessage(msg.to,"คำสั่งเตะค้าบจากน้องบิ๊ก 😫")                               
 
                 elif 'invite' in text.lower():
                        targets = []
@@ -2895,7 +2897,7 @@ def lineBot(op):
                                line.inviteIntoGroup(msg.to,[target])
                                line.sendMessage(receiver, "Type👉 Invite Succes")
                            except:
-                               line.sendMessage(msg.to,"Type👉 Limit Invite")
+                               line.sendMessage(msg.to,"Type👉 สวัสดีค้าบบ")
                 elif "Cleanse" in msg.text:
                 	if msg.toType == 2:
                          _name = msg.text.replace("Cleanse","")
@@ -3540,7 +3542,8 @@ def lineBot(op):
                              mention = ast.literal_eval(msg.contentMetadata["MENTION"])
                              mentionees = mention["MENTIONEES"]
                              for mention in mentionees:
-                                   if mention["M"] in lineMID:
+                                   if mention["M"] in lineMID:[MID]:[MID]
+u7a95e1c0ad51d08814e319acbc3fbba7
                                           line.sendImageWithURL(to,ret_)
                                           break  
                 if msg.contentType == 0 and sender not in lineMID and msg.toType == 2:
@@ -3548,7 +3551,7 @@ def lineBot(op):
                          if settings['detectMention'] == True:
                              contact = line.getContact(msg._from)
                              cName = contact.displayName
-                             balas = ["มีไรสัส\n " + cName + "\nชอบกุหราา"]
+                             balas = ["มีไรสัส\n " + cName + "\nมีหำดูปะ"]
                              ret_ = "" + random.choice(balas)
                              name = re.findall(r'@(\w+)', msg.text)
                              mention = ast.literal_eval(msg.contentMetadata["MENTION"])
@@ -3559,7 +3562,7 @@ def lineBot(op):
                                           sendMessageWithMention(to, contact.mid)
                                           break											  
                 if msg.text in ["Me","me",".me",".Me","คท","/me"]:
-                    line.sendText(msg.to,"เชคทะมุยกลัวหลุดออ")
+                    line.sendText(msg.to,"มีไรอ่อจะหำเค้าหรอ")
                 if msg.text in ["sp","speed",".speed","/speed","Sp",".Speed"]:
                     line.sendText(msg.to,"เร็วแรงไหมพี่")
                 if msg.text in ["runtime","Runtime","/uptime","ออน",".uptime"]:
@@ -3567,20 +3570,20 @@ def lineBot(op):
                 if msg.text in [".มอง"]:
                     line.sendText(msg.to,"มองไยยยย")	  
                 if msg.text in ["555","5555","55555"]:
-                    line.sendText(msg.to,"ขำอะไรนักหนา-.-")	
+                    line.sendText(msg.to,"ตลกหรอ-.-")	
                 if msg.text in dangerMessage:
                     random.choice(Rfu).kickoutFromGroup(receiver,[sender])
                     random.choice(Rfu).sendText(msg.to,"ตรวจพบคำสั่งของบอทลบกลุ่ม จำเป็นต้องนำออกเพื่อความปลอดภัยของสมาชิก โจ๊ะๆ ω´)")										
         if op.type == 17:
         	dan = line.getContact(op.param2)
         	tgb = line.getGroup(op.param1)
-        	line.sendMessage(op.param1, "สวัสดี {}, Welcome to Group {}\nยินดีต้อนรับหมาน้อย・ω・".format(str(dan.displayName),str(tgb.name)))
+        	line.sendMessage(op.param1, "สวัสดี {}, Welcome to Group {}\nยินดีต้อนรับน้าา เราบิ๊กน้า・ω・".format(str(dan.displayName),str(tgb.name)))
         	line.sendContact(op.param1, op.param2)
         	line.sendImageWithURL(op.param1, "http://dl.profile.line-cdn.net{}".format(dan.picturePath))
         if op.type == 15:
         	dan = line.getContact(op.param2)
         	tgb = line.getGroup(op.param1)
-        	line.sendMessage(op.param1, "อุ้ย!! {}, ได้ออกจากกลุ่ม {} \nยืนไว้อาลัยนะคับ งุงิ・ω・".format(str(dan.displayName),str(tgb.name)))
+        	line.sendMessage(op.param1, "อุ้ย!! {}, ได้ออกจากกลุ่ม {} \nไปเถอะคับน้องบิ๊กไม่สน งุงิ・ω・".format(str(dan.displayName),str(tgb.name)))
         	line.sendContact(op.param1, op.param2)
         if op.type == 55:
             try:
