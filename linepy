@@ -195,4 +195,4 @@ class Auth(object):
         print(str)
 
     def logout(self):
-        self.auth.logoutZ()
+        self.auth.logoutZ() 
